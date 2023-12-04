@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: #745f49;
+  background-image: url("/assets/images/protruding-squares.svg");
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  height: 70vh;
+  width: 70vw;
+
+  padding: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card__header {
+  height: 10%;
+  width: 100%;
+
+  background-color: #c8c8c833;
+  border-radius: 5px 5px 0 0;
+
+  border-bottom: 3px solid #ff000045;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.card__title {
+  font-family: "Chakra Petch";
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card__body {
+    height: calc(80% - 10px);
+  padding: 10px;
+
+  background-color: #c8c8c833;
+  border-radius: 0;
+}
+
+.card__photo {
+  padding: 5px;
+
+  background-color: #c8c8c855;
+  border-radius: 50%;
+}
+
+.card__photo img {
+  height: 100%;
+  width: 100%;
+
+  border: 3px solid #ff000045;
+  border-radius: 50%;
+  /* object-fit: cover; */
+}
+
+.card__text {
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.card__text.bio {
+  width: 44%;
+}
+
+.card__bio {
+  font-family: "Merriweather";
+}
+
+.card__tagline {
+  font-family: "Chakra Petch";
+  width: fit-content;
+}
+
+.card__text.skills {
+  width: 22%;
+}
+
+.card__skills-title {
+  font-family: "Chakra Petch";
+  width: fit-content;
+}
+
+.card__skills-list {
+  list-style: square;
+  list-style-position: inside;
+  padding: 0;
+
+  font-family: "Merriweather";
+}
+
+.card__footer {
+    height: 10%;
+    width: 100%;
+  
+    background-color: #c8c8c833;
+    border-radius: 0 0 5px 5px;
+  
+    border-top: 3px solid #ff000045;
+  
+    justify-content: center;
+    align-items: center;
+  }
+
+.flex {
+  display: flex;
+}
+
+.flex-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.glass-container {
+  background-color: #c8c8c833;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #000000cc, 0 6px 40px 0 #000000e6;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1.5px solid #ffffff2e;
+}
+
+.etched-text {
+  color: #00000099; /* Makes the text itself transparent */
+  text-shadow: 0px 2px 3px #ffffff80,
+    /* White shadow for the etched depth */ 0 -1px 1px #000000cc; /* Dark shadow for sharpness */
+}
+
+.etched-divider--left {
+  position: relative; /* Required for positioning the pseudo-element */
+  border-left: 2px solid rgba(0, 0, 0, 0.2); /* Basic left border */
+}
+
+.etched-divider--left::before {
+  content: "";
+  position: absolute;
+  left: 0; /* Align with the left border */
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Same as border width */
+  background: rgba(0, 0, 0, 0.2); /* Solid color matching the border */
+  box-shadow: -1px 0px 2px rgba(255, 255, 255, 0.8),
+    /* Light shadow for depth */ 1px 0px 2px rgba(0, 0, 0, 0.3); /* Dark shadow for definition */
+}
